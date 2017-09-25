@@ -27,16 +27,25 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    /**
+     * Устанавливает зависимость один ко многим
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function posts()
     {
-       return $this->hasMany(Post::class);
+        return $this->hasMany(Post::class);
     }
 
+    /**
+     * Сохраняет пост
+     *
+     * @param Post $post
+     * @return false|\Illuminate\Database\Eloquent\Model
+     */
     public function publish(Post $post)
     {
 
-        $this->posts()->save($post);
-
-        return redirect()->home();
+        return $this->posts()->save($post);
     }
 }
