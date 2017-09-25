@@ -8,9 +8,6 @@
 
     @endforeach
 
-    <nav class="blog-pagination">
-        <a class="btn btn-outline-primary" href="#">Вперед</a>
-        <a class="btn btn-outline-secondary disabled" href="#">Назад</a>
-    </nav>
+    {{ $posts->links() }}
 
 @endsection
