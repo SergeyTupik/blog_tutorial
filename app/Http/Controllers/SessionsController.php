@@ -22,7 +22,8 @@ class SessionsController extends Controller
             return back()->withErrors([
 
                 'message' => 'Проверьте введенные данные и повторите попытку']);
-        };
+        }
+        return redirect('/');
     }
 
     public function destroy()

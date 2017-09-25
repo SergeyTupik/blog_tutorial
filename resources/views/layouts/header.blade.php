@@ -23,6 +23,6 @@
 <div class="blog-header">
     <div class="container">
         <h1 class="blog-title">The Bootstrap Блог</h1>
-        <p class="lead blog-description">Пример блога на bootstrap.</p>
+        <p class="lead blog-description">Пример блога на bootstrap</p>
     </div>
 </div>
